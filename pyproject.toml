@@ -8,8 +8,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+spotipy = "^2.19.0"
+randomname = "^0.1"
+
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+poetry = 'poetry.console:run'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
