@@ -5,7 +5,8 @@ Create a Playlist using the spotify API
 ## Installation
 
 ```bash
-$ pip install mkply
+$ pip install git+https://github.com/elena-krismer/mkply.git
+
 ```
 
 ## Usage
