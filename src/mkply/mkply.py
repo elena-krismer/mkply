@@ -2,28 +2,7 @@ from email.mime import base
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-urn = 'spotify:artist:3jOstUTkEu2JkjvRdBA5Gu'
-sp = spotipy.Spotify()
 
-
-class SingleListener:
-    # wrappe for spotipy library
-    def __init__(self):
-        self.clientID = None
-        self.credentials = None
-    def playlist_based_on_single_song(self, songID, save_playlist = False):
-        pass
-
-class MultiListener:
-    def __init__(self):
-        self.artists= None # dict with name of listener and artist 
-        self.favourite_song = None # dict with name of listener and favourtie_song
-        self.main_user = None # to save Playlist
-    def
-      
-    
-    
-      
 
 def calculate_distance():
     # calculate euclidean distance between one song from group A and other groups
