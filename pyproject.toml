@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mkply"
-version = "0.1.0"
+version = "0.1.1"
 description = "Create a Playlist using the spotify API "
 authors = ["Elena Krismer"]
 license = "MIT"
