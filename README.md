@@ -1,6 +1,8 @@
 # mkply
 
-Create a Spotify Playlist. This package is a wrapper around [Spotipy](https://github.com/plamere/spotipy).
+Create a Spotify Playlist for yourself or a joint playlist with your friends. 
+
+This package is a wrapper around [Spotipy](https://github.com/plamere/spotipy).
 
 ## Installation
 
@@ -13,19 +15,24 @@ $ pip install git+https://github.com/elena-krismer/mkply.git
 
 <details>
   <summary>User Authenifcation</summary>
-To get started you need a client ID and secret from spotify: https://developer.spotify.com/documentation/general/guides/authorization/app-settings/. Further,
-you have to specify an `redirect_uri`in your spotify developer account.
 
-Plus, to save your playlist you require your `user_id`, which you can find in your Spotify account (-> account)  
+* get `client_id` and `client_secret`  https://developer.spotify.com/documentation/general/guides/authorization/app-settings/
+
+* specify `redirect_uri` in your spotify developer account
+
+* Plus, to save your playlist you require your `user_id`, which you can find in your Spotify account (-> account)
+
+More details about the authorization you can find on [Spotipy](https://github.com/plamere/spotipy).
+
 </details>
 
 
 <details>
   <summary>Create Playlist for myself</summary>
 
-```
+```python
 import mkply
-sp = mkply.SingleListener(client_id="your_client_id",
+sp = mkply.Listener(client_id="your_client_id",
                              client_secret="your_client_secret",
                              redirect_uri = "your_redirect_uri", 
                              user_id = "your_user_id")
@@ -36,10 +43,10 @@ sp.create_playlist(save = True)
 
 
 <details>
-  <summary>Create Playlist for with Friends</summary>
+  <summary>Create Playlist with Friends</summary>
 
 In order to create a Playlist with friends 
-```
+```python
 import mkply
 friend_1 = mkply.Listener(client_id="friend_1_client_id",
                              client_secret="friend_1_client_secret",
@@ -49,7 +56,7 @@ friend_2 = mkply.Listener(client_id="friend_2_client_id",
                              redirect_uri = "friend_2_redirect_uri") 
 
 # Spotify main account - here playlists will be saved
-main_account = mkply.SingleListener(client_id="your_client_id",
+main_account = mkply.Listener(client_id="your_client_id",
                              client_secret="your_client_secret",
                              redirect_uri = "your_redirect_uri", 
                              user_id = "your_user_id")
