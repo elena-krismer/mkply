@@ -1,0 +1,75 @@
+:py:mod:`try`
+=============
+
+.. py:module:: try
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   try.load_obj
+   try.save_obj
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   try.SPOTIPY_CLIENT_ID
+   try.SPOTIPY_CLIENT_SECRET
+   try.SPOTIPY_REDIRECT_URI
+   try.SCOPE
+   try.sp
+   try.results
+   try.track
+
+
+.. py:data:: SPOTIPY_CLIENT_ID
+   :annotation: = 9804b71605cf4d73bacb45f014ff1981
+
+   
+
+.. py:data:: SPOTIPY_CLIENT_SECRET
+   :annotation: = 54d6524a21b9423ca8124785ded37a9a
+
+   
+
+.. py:data:: SPOTIPY_REDIRECT_URI
+   :annotation: = https://github.com/elena-krismer/mkply
+
+   
+
+.. py:data:: SCOPE
+   :annotation: = user-library-read
+
+   
+
+.. py:data:: sp
+   
+
+   
+
+.. py:data:: results
+   
+
+   
+
+.. py:data:: track
+   
+
+   
+
+.. py:function:: load_obj(name)
+
+
+.. py:function:: save_obj(obj, name)
+
+

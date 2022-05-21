@@ -1,0 +1,54 @@
+:py:mod:`mkply.mkply`
+=====================
+
+.. py:module:: mkply.mkply
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   mkply.mkply.calculate_distance
+   mkply.mkply.playlist_based_on_playlists
+   mkply.mkply.create_multiple_userplaylist
+   mkply.mkply.create_pl_for_users_genre
+
+
+
+.. py:function:: calculate_distance()
+
+
+.. py:function:: playlist_based_on_playlists(list_of_pl, based_on=['artists', 'features'], length=25)
+
+   one user is sufficient finds intersect between several playlists
+
+   :param list_of_pl: _description_
+   :type list_of_pl: _type_
+   :param based_on: _description_. Defaults to ["artists", "features", "genre"].
+   :type based_on: list, optional
+   :param length: _description_. Defaults to 25.
+   :type length: int, optional
+
+
+.. py:function:: create_multiple_userplaylist(userIDs, pl_length, based_on=['recently_played', 'artists', 'genre'])
+
+   needs to connect to the spotify of multiple users
+
+   :param userIDs: _description_
+   :type userIDs: _type_
+   :param pl_length: _description_
+   :type pl_length: _type_
+   :param based_on: _description_. Defaults to ["recently_played", "artists", "genre"].
+   :type based_on: list, optional
+
+   :raises ValueError: _description_
+
+
+.. py:function:: create_pl_for_users_genre(userIDs, categoryID)
+
+

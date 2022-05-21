@@ -1,0 +1,117 @@
+:py:mod:`mkply.Listener`
+========================
+
+.. py:module:: mkply.Listener
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   mkply.Listener.Listener
+
+
+
+
+.. py:class:: Listener(client_id, client_secret, redirect_uri, user_id=None, limit=100)
+
+   .. py:method:: updsate_top_tracks_artists(self, limit=100)
+
+      updates top artists and top tracks of Listener
+
+      :param limit: number of top artists/tracks. Defaults to 100.
+      :type limit: int, optional
+
+
+   .. py:method:: save_playlist(self, tracks_list, name=None)
+
+      save playlist in your spotify profile
+      user_id most be specified in object
+
+      :param tracks_list: _description_
+      :type tracks_list: list
+      :param name: name of playlist, else (very) random name will be created. Defaults to None.
+      :type name: string, optional
+
+      :raises ValueError: if user_id is none
+
+
+   .. py:method:: rank_artists(self)
+
+      Creates a dict with the ranking of the artists. and related artist (more suitable for multiple listeners)
+
+      :returns: Counter dict with artist_id as key and value is the count/ranking of the artist
+      :rtype: _type_
+
+
+   .. py:method:: create_genre_dict(self)
+
+      create dict with genres as keys and a list of aritst_ids as values
+
+
+
+   .. py:method:: get_top_tracks_of_artist_list(self, artist_list)
+
+      get list of top tracks (ids) from a list of artists
+
+      :param artist_list: list with artist_ids
+      :type artist_list: list
+
+      :returns: list with songs
+      :rtype: list
+
+
+   .. py:method:: create_playlist(self, n_songs=25, genre=None, n_artists=25, save=False, name=None)
+
+      creates a random playlist based in your top artists or selected genre
+
+      :param n_songs: number of songs in the playlist. Defaults to 25.
+      :type n_songs: int, optional
+      :param genre: _description_. Defaults to None.
+      :type genre: _type_, optional
+      :param n_artists: number of top artists chosen. Defaults to 25.
+      :type n_artists: int, optional
+      :param save: whether playlist should be saved in account. user_id must be specified in the object. Defaults to False.
+      :type save: bool, optional
+      :param name: name of playlist. if not specified (very) random
+      :type name: _type_, optional
+      :param name is created. Defaults to None.:
+
+      :returns: list of track ids if not saved as playlist
+      :rtype: list
+
+
+   .. py:method:: save_to_json(self, filename)
+
+      save object of class listener to json
+
+      :param filename: filename of json
+      :type filename: string
+
+
+   .. py:method:: load_json(cls, json_file)
+      :classmethod:
+
+      loads json file into class
+
+      :param json_file: name of json file
+      :type json_file: string
+
+      :returns: Object of class Listener
+      :rtype: _type_
+
+
+   .. py:method:: print_top_artists_and_genres(self)
+
+      prints list with top generes and name of artist
+
+
+
+   .. py:method:: playlist_based_on_single_song(self, songID=None, save_playlist=False)
+
+
+

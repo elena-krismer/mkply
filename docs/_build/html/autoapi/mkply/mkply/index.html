@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mkply.mkply &mdash; mkply 21-05-2022 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> mkply
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mkply</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">mkply.mkply</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/mkply/mkply/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mkply.mkply">
+<span id="mkply-mkply"></span><h1><a class="reference internal" href="#module-mkply.mkply" title="mkply.mkply"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mkply.mkply</span></code></a><a class="headerlink" href="#module-mkply.mkply" title="Permalink to this headline"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mkply.mkply.calculate_distance" title="mkply.mkply.calculate_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_distance</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mkply.mkply.playlist_based_on_playlists" title="mkply.mkply.playlist_based_on_playlists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlist_based_on_playlists</span></code></a>(list_of_pl, based_on=['artists', 'features'], length=25)</p></td>
+<td><p>one user is sufficient finds intersect between several playlists</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mkply.mkply.create_multiple_userplaylist" title="mkply.mkply.create_multiple_userplaylist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_multiple_userplaylist</span></code></a>(userIDs, pl_length, based_on=['recently_played', 'artists', 'genre'])</p></td>
+<td><p>needs to connect to the spotify of multiple users</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mkply.mkply.create_pl_for_users_genre" title="mkply.mkply.create_pl_for_users_genre"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_pl_for_users_genre</span></code></a>(userIDs, categoryID)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="mkply.mkply.calculate_distance">
+<span class="sig-prename descclassname"><span class="pre">mkply.mkply.</span></span><span class="sig-name descname"><span class="pre">calculate_distance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mkply.mkply.calculate_distance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mkply.mkply.playlist_based_on_playlists">
+<span class="sig-prename descclassname"><span class="pre">mkply.mkply.</span></span><span class="sig-name descname"><span class="pre">playlist_based_on_playlists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_pl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">based_on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['artists',</span> <span class="pre">'features']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mkply.mkply.playlist_based_on_playlists" title="Permalink to this definition"></a></dt>
+<dd><p>one user is sufficient finds intersect between several playlists</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list_of_pl</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>based_on</strong> (<em>list</em><em>, </em><em>optional</em>) – _description_. Defaults to [“artists”, “features”, “genre”].</p></li>
+<li><p><strong>length</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 25.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mkply.mkply.create_multiple_userplaylist">
+<span class="sig-prename descclassname"><span class="pre">mkply.mkply.</span></span><span class="sig-name descname"><span class="pre">create_multiple_userplaylist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userIDs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pl_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">based_on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['recently_played',</span> <span class="pre">'artists',</span> <span class="pre">'genre']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mkply.mkply.create_multiple_userplaylist" title="Permalink to this definition"></a></dt>
+<dd><p>needs to connect to the spotify of multiple users</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>userIDs</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>pl_length</strong> (<em>_type_</em>) – _description_</p></li>
+<li><p><strong>based_on</strong> (<em>list</em><em>, </em><em>optional</em>) – _description_. Defaults to [“recently_played”, “artists”, “genre”].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – _description_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mkply.mkply.create_pl_for_users_genre">
+<span class="sig-prename descclassname"><span class="pre">mkply.mkply.</span></span><span class="sig-name descname"><span class="pre">create_pl_for_users_genre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userIDs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categoryID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mkply.mkply.create_pl_for_users_genre" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Elena Krismer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
