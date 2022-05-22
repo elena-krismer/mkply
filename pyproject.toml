@@ -10,6 +10,8 @@ readme = "README.md"
 python = "^3.7"
 spotipy = "^2.19.0"
 randomname = "^0.1"
+importlib-metadata= "^3"
+#pkgutil = ""
 
 
 
