@@ -1,5 +1,5 @@
-from msilib.schema import Error
-from tkinter import E
+
+#from tkinter import E
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from spotipy.oauth2 import SpotifyOAuth
