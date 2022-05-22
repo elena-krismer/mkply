@@ -1,7 +1,7 @@
 # read version from installed package
-from importlib.metadata import version
-from os.path import dirname, basename, isfile, join
-import glob
+from importlib_metadata import version
+#from os.path import dirname, basename, isfile, join
+
 from pkgutil import ImpImporter
 from .Listener import *
 from .MultiListener import *
