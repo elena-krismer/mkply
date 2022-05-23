@@ -7,6 +7,7 @@ from collections import Counter
 import randomname
 import random
 import warnings
+import json
 
 
 class MultiListener:
@@ -108,30 +109,6 @@ class MultiListener:
     def create_features_df(self):
         pass
 
-    
-    def save_to_json(self, filename):
-        """save object of class listener to json 
-
-        Args:
-            filename (string): filename of json
-        """
-        with open(filename, 'w') as f:
-            json.dumps(self.__dict__, f) #default=vars
-
-
-    @classmethod
-    def load_json(cls, json_file):
-        """loads json file into class
-
-        Args:
-            json_file (string): name of json file
-
-        Returns:
-            _type_: Object of class Listener
-        """
-        json_dict = json.loads(json_file)
-        return cls(**json_dict)
-
 
     def create_playlist(self, n_songs = 25, genre = None, n_artists = 25, save = False, name = None):
         """creates a random playlist based in your top artists (atm) or selected genre
@@ -159,7 +136,7 @@ class MultiListener:
             if genre not in available_genres:
                 raise NameError(genre  + " is not available, choose from following genres: " + available_genres)
         
-            artists_of_genre = self.create_genre_dict.get(genre)
+            artists_of_genre = self.genre_dict.get(genre)
             song_list = self.get_top_tracks_of_artist_list(artist_list= artists_of_genre)
         
         # create playlist based on most popular artists

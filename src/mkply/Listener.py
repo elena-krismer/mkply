@@ -183,7 +183,7 @@ class Listener:
             if genre not in available_genres:
                 raise NameError(genre  + " is not available, choose from following genres: " + available_genres)
             #raise NotImplementedError("Creating a Playlist based on a genre has not been implemented yet")
-            artists_of_genre = self.create_genre_dict.get(genre)
+            artists_of_genre = self.genre_dict.get(genre)
             song_list = self.get_top_tracks_of_artist_list(artist_list= artists_of_genre)
         
         # create playlist based on most popular artists
@@ -210,8 +210,17 @@ class Listener:
         Args:
             filename (string): filename of json
         """
-        with open(filename, 'w') as f:
-            json.dumps(self.__dict__, f) #default=vars
+        # spotipy object can not be saved as json
+        spotipy_object_tmp = self.spotipy_object
+        spotipy_object_playlist_creation_tmp = self.spotipy_object_playlist_creation
+        self.spotipy_object = "NULL"
+        self.spotipy_object_playlist_creation = "NULL" 
+        with open(filename, "w") as f:
+            json.dump(self.__dict__, f)
+
+        self.spotipy_object = spotipy_object_tmp
+        self.spotipy_object_playlist_creation = spotipy_object_playlist_creation_tmp
+
 
 
     @classmethod
@@ -224,7 +233,8 @@ class Listener:
         Returns:
             _type_: Object of class Listener
         """
-        json_dict = json.loads(json_file)
+        with open(json_file, 'r') as j:
+            json_dict = json.loads(j.read())
         return cls(**json_dict)
 
 
