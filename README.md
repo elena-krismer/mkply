@@ -14,7 +14,7 @@ $ pip install git+https://github.com/elena-krismer/mkply.git
 ## Usage
 
 <details>
-  <summary>User Authenifcation</summary>
+  <summary>User Authenification</summary>
 
 * get `client_id` and `client_secret`  https://developer.spotify.com/documentation/general/guides/authorization/app-settings/
 
@@ -28,7 +28,7 @@ More details about the authorization you can find on [Spotipy](https://github.co
 
 
 <details>
-  <summary>Create Playlist for myself</summary>
+  <summary>Create playlist for myself</summary>
 
 ```python
 import mkply
@@ -43,9 +43,9 @@ sp.create_playlist(save = True)
 
 
 <details>
-  <summary>Create Playlist with Friends</summary>
+  <summary>Create playlist with friends</summary>
 
-In order to create a Playlist with friends 
+ 
 ```python
 import mkply
 friend_1 = mkply.Listener(client_id="friend_1_client_id",
@@ -61,8 +61,7 @@ main_account = mkply.Listener(client_id="your_client_id",
                              redirect_uri = "your_redirect_uri", 
                              user_id = "your_user_id")
 
-sp = MultiListener(list_of_listeners = [friend_1, friend_2] , spotify_account = main_account)                   
-
+sp = mkply.MultiListener(list_of_listeners = [friend_1, friend_2, main_account] , spotify_account = main_account)             
 sp.create_playlist(save = True)
 ```
   
