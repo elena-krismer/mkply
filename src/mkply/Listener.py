@@ -53,7 +53,7 @@ class Listener:
         self.genre_dict = None
 
 
-    def updsate_top_tracks_artists(self, limit = 100):
+    def update_top_tracks_artists(self, limit = 100):
         """updates top artists and top tracks of Listener
 
         Args:
